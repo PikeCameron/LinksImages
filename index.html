@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A page full of links and images">
+    <title>Links and Images</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <style>
+    picture img {
+      width: 100%;
+    }
+
+    /* this is to limit the size of the SVG. You can also add a width and height to the SVG element, 
+       but once we start CSS, it's easier to use CSS. 
+      
+      If you want to change the color of the SVG using CSS, remove the stroke property from 
+      the SVG declaration */
+    header svg {
+      stroke: gold;
+      width: 40px;
+      height: 40px;
+    }
+
+    figure img{
+        width: 300px;
+        height: 300px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+      <nav>
+        <ul>
+          <li><a>Home</a></li>
+          <li><a href="about/">About</a></li>
+          <li><a href="form/">Form</a></li>
+        </ul>
+      </nav>
+
+      <svg>
+        <use href="#menu" />
+      </svg>
+      <p>This is the hottest svg ever!</p>
+    </header>
+  
+    <!-- the hero image as a picture -->
+    <picture>
+      <source srcset="images/hero-1600.jpg" media="(min-width: 902px)">
+      <source srcset="images/hero-900.jpg" media="(min-width: 502px)">
+      <source srcset="images/hero-500.jpg" media="(max-width: 500px)">
+  
+      <img src=" images/hero-900.jpg"
+        alt="man looking out into the distance">
+    </picture>
+    <main>
+  
+      <h1>Lonely Thoughts</h1>
+  
+      <article>
+        <h2>Loneliness is the Cure</h2>
+        <p>Have you ever had a decent thought? You were probably alone. 
+            Have you ever eaten a great meal? You were probably alone.
+        </p>
+  
+        <p>The greatest accomplishments have always been done alone. It never took
+            two people for Kobe Bryant to shoot the game winner.
+        </p>
+      </article>
+  
+      <figure>
+        <img src="images/pipe.svg" alt="front view of a cute red squirrel">
+        <figcaption>This pipe will make you wise!</figcaption>
+      </figure>
+      <article>
+        <h2>Gandalf</h2>
+        <p>Gandalf is probably one of the wisest dudes ever!  Seriously! If you don't believe me, <a
+            href="https://lotr.fandom.com/wiki/Gandalf">read about all of his accomplishments.</a> to see that if these creatures
+          There are only two things that correlate with Gandalf's wisdom: <em>He is often alone and 
+              smokes a pipe.
+          </em></p>
+      </article>
+    </main>
+  
+  
+    <footer>
+      <p>Gandalf approves this message.</p>
+    </footer>
+    <svg>
+      <symbol id="menu" viewbox="0 0 120 120">
+        <line x1="6" y1="30" x2="114" y2="30" stroke-width="8"
+          stroke-linecap="round" />
+        <line x1="6" y1="60" x2="114" y2="60" stroke-width="8"
+          stroke-linecap="round" />
+          <line x1="6" y1="90" x2="114" y2="90" stroke-width="8"
+          stroke-linecap="round" />
+      </symbol>
+    </svg>
+  </body>
+</html>
